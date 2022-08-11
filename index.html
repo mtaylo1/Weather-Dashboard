@@ -10,59 +10,52 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css">
     </head>
     <body>
 <h1>Weather Dashboard</h1>
 <div class="container-fluid">
     <div class="row content">
       <div class="col-sm-3 sidenav">
-        <h2>Search for a city</h2>
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search City..">
+        <input id="citySearch" class="form-control" name="city" value="Etobicoke"></input>
             <span class="input-group-btn">
+              <div id="search-error"></div>
+              <ul id="city-results" class="list-group mt-4"></ul>
+              <a id="clear-storage" href="#"></a>    
+          </div>
+
+          <div id="content-right" class="col-md-9 pt-4">
+              <div id="current-weather" class="border rounded"></div>
+              <div id="five-day-forecast" class="mt-5"></div>
               <button class="btn btn-default" type="button">
                 <span class="glyphicon glyphicon-search"></span>
               </button>
             </span>
           </div>
-        <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#section1">Toronto</a></li>
-          <li><a href="#section2">British Columbia</a></li>
-          <li><a href="#section3">New York</a></li>
-          <li><a href="#section3">Orlando</a></li>
-          <li><a href="#section4">Hamilton</a></li>
-          <li><a href="#section5">Edmonton</a></li>
-          <li><a href="#section6">Winnipeg</a></li>
-          <li><a href="#section7">Texas</a></li>
-        </ul><br>
         
       </div>
-  
-      <div class="col-sm-9">
-        <div class="well well-lg">Selected City Placeholder</div>
-        
-        <div class="row hide pt-3 p-md-3" id="forecast-section">
-            <div class="col-12">
-              <h3>5-Day Forecast:</h3>
-            </div>
-            <div class="col-12">
-              <div class="row d-flex justify-content-lg-between" id="five-day">
 
-              </div>
+      <div id="content" class="container">
+        <div class="row">
+            <div id="content-left" class="col-md-3">
+                <form>
+                    
+                <div id="search-error"></div>
+                <ul id="city-results" class="list-group mt-4"></ul>
+                <a id="clear-storage" href="#"></a>    
             </div>
-        
-      </div>
+
+            <div id="content-right" class="col-md-9 pt-4">
+                <div id="current-weather" class="border rounded"></div>
+                <div id="five-day-forecast" class="mt-5"></div>
+            </div>
+        </div>
     </div>
-  </div>
-  
-  <footer class="container-fluid">
-    
-  </footer>
-  </div>
-  
-  
-  </body>
-  </html>
-        <script src="" async defer></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="/assets/js/script.js"></script>
     </body>
 </html>
