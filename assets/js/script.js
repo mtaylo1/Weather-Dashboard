@@ -6,19 +6,19 @@ var errormsg = (response) => {
     if (!response.ok) {
         throw Error(response.statusText);
     }
-    return response
-    
+    return response;
 }
 
-var getCurrentWeather = (event) => {
-    let = $('#city-Search').val();
-    nowCity = $('#city-Search').val();
 
-    let URLfetch = "https://api.openweathermap.org/data/2.5/weather?q=" + nowCity + "&units=metric" + "&APPID=" + APIkey;
+var getCurrentWeather = (event) => {
+    let city = $('#citySearch').val();
+    nowCity = $('#citySearch').val();
+
+    let URLfetch = "https://api.openweathermap.org/data/2.5/find?q=" + nowCity + "&units=metric" + "&APPID=" + APIkey;
     fetch(URLfetch)
     .then(errormsg)
     .then((response) => {
-        return response.JSON();
+        return response.json();
     })
 
     .then((response) => {
@@ -125,7 +125,7 @@ var fiveDayForecast = (event) => {
                 break;
             }
         }
-        if (cityExists === false) {
+        if (cityReady === false) {
             localStorage.setItem('cities' + localStorage.length, newCity);
         }
     }
