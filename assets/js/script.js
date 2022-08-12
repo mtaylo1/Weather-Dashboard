@@ -168,14 +168,14 @@ var fiveDayForecast = (event) => {
     $('#search-button').on("click", (event) => {
         event.preventDefault();
         nowCity = $('#search-city').val();
-        currentConditions(event);
+        getCurrentWeather(event);
         });
         
         $('#city-results').on("click", (event) => {
             event.preventDefault();
             $('#search-city').val(event.target.textContent);
             nowCity=$('#search-city').val();
-            currentConditions(event);
+            getCurrentWeather(event);
         });
         
         $("#clear-storage").on("click", (event) => {
