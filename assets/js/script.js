@@ -14,7 +14,7 @@ var getCurrentWeather = (event) => {
     let city = $('#citySearch').val();
     nowCity = $('#citySearch').val();
 
-    let URLfetch = "https://api.openweathermap.org/data/2.5/find?q=" + nowCity + "&units=metric" + "&APPID=" + APIkey;
+    let URLfetch = "https://api.openweathermap.org/data/2.5/find?q=" + city + "&units=metric" + "&APPID=" + APIkey;
     fetch(URLfetch)
     .then(errormsg)
     .then((response) => {
@@ -24,16 +24,18 @@ var getCurrentWeather = (event) => {
     .then((response) => {
 
         saveCity(city);
-        $('#search-error').text("");
+        $('#search-error').text(""); 
 
-        let currentWeatherBox = "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
+        var iconcode = [0].icon;
+
+        var currentWeatherBox = "http://openweathermap.org/img/w/" + iconcode + ".png";
         let currentTimeUTC = response.dt;
         let currentTimeZoneOffset = response.timezone;
         let currentTimeZoneOffsetHours = currentTimeZoneOffset / 60 / 60;
         let currentMoment = moment.unix(currentTimeUTC).utc().utcOffset(currentTimeZoneOffsetHours);
 
         makeCities();
-        getForecast(event);
+        fiveDayForecast(event);
 
         $('#header-text').text(response.name);
 
@@ -78,7 +80,7 @@ var getCurrentWeather = (event) => {
 
 
 var fiveDayForecast = (event) => {
-        let city = $('citySearch').val();
+        let city = $('#citySearch').val();
 
         let URLfetch = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric" + "&APPID=" + APIkey;
         
@@ -136,7 +138,7 @@ var fiveDayForecast = (event) => {
             if (prevCity){
                 $('#search-city').attr("value", prevCity);
             } else {
-                $('#search-city').attr("value", "Austin");
+                $('#search-city').attr("value", "Toronto");
             }
         } else {
 
