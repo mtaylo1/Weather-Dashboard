@@ -14,7 +14,7 @@
     }
 
     .jumbotron {
-      padding: 1rem;
+      padding: 2rem;
       border-radius: 0;
   }
 
@@ -52,6 +52,14 @@ footer {
       color: white;
       padding: 15px;
     }
+
+#header{
+      background-size: cover;
+      background-position-y: 40%;
+      color:white;
+      background-color:rgb(83, 83, 83);
+      position:relative !important;
+  }
     
 #header h1{
       font-size: 400%;
