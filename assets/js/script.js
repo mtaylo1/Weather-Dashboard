@@ -28,7 +28,7 @@ var getCurrentWeather = (event) => {
 
         var iconcode = [0].icon;
 
-        var currentWeatherBox = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        var currentWeatherBox="https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
         let currentTimeUTC = response.dt;
         let currentTimeZoneOffset = response.timezone;
         let currentTimeZoneOffsetHours = currentTimeZoneOffset / 60 / 60;
