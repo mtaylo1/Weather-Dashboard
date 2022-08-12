@@ -1,6 +1,7 @@
+var APIkey = "aab0f276c4936503dad60ee92c7a45e5"
 var nowCity
 var prevCity
-var APIkey = "aab0f276c4936503dad60ee92c7a45e5"
+
 
 var errormsg = (response) => {
     if (!response.ok) {
@@ -26,11 +27,13 @@ var getCurrentWeather = (event) => {
         saveCity(city);
         $('#search-error').text(""); 
 
-        let currentWeatherBox = "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
+        
+        
         let currentTimeUTC = response.dt;
         let currentTimeZoneOffset = response.timezone;
         let currentTimeZoneOffsetHours = currentTimeZoneOffset / 60 / 60;
         let currentMoment = moment.unix(currentTimeUTC).utc().utcOffset(currentTimeZoneOffsetHours);
+        let currentWeatherBox = "https://openweathermap.org/img/w/" + response.weather[0].icon + ".png";
 
         makeCities();
         fiveDayForecast(event);
