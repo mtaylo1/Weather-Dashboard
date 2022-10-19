@@ -5,9 +5,7 @@ This is my Sixth assignment. In this one I am required to create a dashboard bas
 
 # Screenshots
 
-https://mtaylo1.github.io/password-generator2/Screenshots/password-generator-screenshot.PNG
-
-https://mtaylo1.github.io/password-generator2/Screenshots/password-generator-screenshot2.PNG
+https://github.com/mtaylo1/Weather-Dashboard/blob/main/assets/images/weather-dashboard-screenshot.PNG
 
 # Roadmap
 Eventually, I will continue to revise this with the new skills I receive during this bootcamp.
