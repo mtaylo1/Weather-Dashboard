@@ -1,7 +1,7 @@
 # Weather-Dashboard - Mustapha Taylor
 
 # Description
-This is my Sixth assignment. In this one I am required to create a dashboard based on the API from openweather.
+This is a simple weather dashboard application built using HTML, CSS, and JavaScript. It utilizes the OpenWeatherMap API to fetch and display current weather data for any city entered by the user. The app also shows a 5-day forecast for the selected city.
 
 # Screenshots
 
